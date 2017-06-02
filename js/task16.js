@@ -2,7 +2,7 @@
 * @Author: xuhegang
 * @Date:   2017-05-24 13:28:59
 * @Last Modified by:   xuhegang
-* @Last Modified time: 2017-05-25 14:24:42
+* @Last Modified time: 2017-06-02 10:41:06
 */
 
 /**
@@ -37,11 +37,12 @@ function addAqiData() {
  */
 function renderAqiList() {
    str="<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
-   for(var prop in aqiData){
-   	str+="<tr><td>"+prop+"</td><td>"+aqiData[prop]+"</td><td><button>删除</button></td></tr>";
+   var test={1: "50", 2: "505", 3: "505", 4: "505"}
+   for(var prop in test){
+   	str+="<tr><td>"+prop+"</td><td>"+test[prop]+"</td><td><button>删除</button></td></tr>";
    }
    document.getElementById("aqi-table").innerHTML=str;
-   console.log(aqiData);
+   // console.log(aqiData);
 }
 
 /**
@@ -97,8 +98,9 @@ function init() {
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
  document.getElementById("add-btn").onclick=addBtnHandle;
-  // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+  // 给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
  document.getElementById("aqi-table").onclick=delBtnHandle;
+ // 输入框失去焦点时验证输入合法性
  document.getElementsByTagName("input")[0].onblur=validate;
  document.getElementsByTagName("input")[1].onblur=validate;
 }
