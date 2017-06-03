@@ -1,0 +1,19 @@
+/*
+* @Author: xuhegang
+* @Date:   2017-06-02 09:27:33
+* @Last Modified by:   xuhegang
+* @Last Modified time: 2017-06-03 11:24:22
+*/
+div#aqi-chart-wrap {
+    display: flex;
+    align-items: flex-end;
+    width: 80%;
+    margin: 10px auto;
+    height: 600px;
+    border: 1px solid black;
+    padding: 0 10px;
+}
+#aqi-chart-wrap div {
+    flex-grow: 1;
+    border: 1px solid black;
+}
