@@ -1,0 +1,15 @@
+/*
+* @Author: xuhegang
+* @Date:   2017-06-07 09:59:25
+* @Last Modified by:   xuhegang
+* @Last Modified time: 2017-06-07 10:06:34
+*/
+#result div {
+    float: left;
+    background-color: red;
+    margin: 10px 10px 10px 0;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    }
