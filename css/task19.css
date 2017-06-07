@@ -1,0 +1,27 @@
+/*
+* @Author: xuhegang
+* @Date:   2017-06-07 12:40:28
+* @Last Modified by:   xuhegang
+* @Last Modified time: 2017-06-07 15:42:30
+*/
+ #result div {
+    float: left;
+    width: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  #result {
+    display: flex;
+    align-items: flex-end;
+    height: 500px;
+    justify-content: center;
+    padding: 50px 0;
+    }
+
+   p{
+   	position:absolute;
+   	top:-35px;
+   	width: 20px;
+
+   }

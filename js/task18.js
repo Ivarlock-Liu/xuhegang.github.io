@@ -2,7 +2,7 @@
 * @Author: xuhegang
 * @Date:   2017-06-03 15:56:23
 * @Last Modified by:   xuhegang
-* @Last Modified time: 2017-06-07 09:59:05
+* @Last Modified time: 2017-06-07 12:15:52
 */
     
     
@@ -53,7 +53,7 @@ function render(){
        	  	alert(data[i]);
        	  	data.splice(i,1);
        	  	render();
-       	  }
+       	 }
        }(i)
   }
 }
