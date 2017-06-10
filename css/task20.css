@@ -1,0 +1,19 @@
+/*
+* @Author: xuhegang
+* @Date:   2017-06-10 11:38:45
+* @Last Modified by:   xuhegang
+* @Last Modified time: 2017-06-10 14:05:22
+*/
+texearea{
+resize: none;
+}
+
+#result div {
+    float: left;
+    background-color:grey;
+    margin: 10px 10px 10px 0;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    }
