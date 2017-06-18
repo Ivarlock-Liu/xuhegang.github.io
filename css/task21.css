@@ -1,0 +1,18 @@
+/*
+* @Author: xuhegang
+* @Date:   2017-06-18 17:28:15
+* @Last Modified by:   xuhegang
+* @Last Modified time: 2017-06-18 17:41:14
+*/
+span {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: width 2s;
+    margin: 12px 5px 10px 0;
+}
+span:hover{
+	width:160px;
+}
