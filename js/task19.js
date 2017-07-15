@@ -2,7 +2,7 @@
 * @Author: xuhegang
 * @Date:   2017-06-07 12:10:18
 * @Last Modified by:   xuhegang
-* @Last Modified time: 2017-06-07 17:16:47
+* @Last Modified time: 2017-06-18 17:57:35
 */
     // 获取第一个匹配元素
   $=function(str){return document.querySelector(str)};
