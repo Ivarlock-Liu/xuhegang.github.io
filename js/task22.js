@@ -14,12 +14,12 @@ function delegateEvent(element, tag, eventName, listener) {
             addEventHandler(element, eventName, function () {
                 var event = arguments[0] || window.event,
                     target = event.target || event.srcElement;
-                if (target && target.tagName === tag.toUpperCase()) {
+                if (target && target.type === tag.toLowerCase()) {
                     listener.call(target, event);
                 }
             })
 }
-
+//根据id获得元素
 function $(id){
   return document.getElementById(id);
 }
@@ -28,7 +28,7 @@ var traversalResult=[];
 var head=null;
 var timer=null;
 var root=document.getElementsByClassName("root")[0];
-var body=ducument.getElementsByTagName("body")[0];
+var body=document.getElementsByTagName("body")[0];
 //前序遍历
 function getPreOrderResult(node) {
          if(node !== null) {
@@ -57,15 +57,35 @@ function getPostOrderResult(node) {
 function show(){
   head=traversalResult.shift();
   if(head!=null){
-     head.style.backgroundColor="blue";
+     head.style.backgroundColor="blue";     //改变正在遍历的元素的颜色
      timer=setTimeout(function(){
-        head.style.backgroundColor="white";
+        head.style.backgroundColor="white";   //1s后变为原颜色
         show();
-     }, 1000)
+     }, 1000);
    }
 }
 
-delegateEvent(body,"")
+function reset(){
+    clearTimeout(timer);
+    traversalResult=[];
+    if(head){
+    head.style.backgroundColor="white";
+    }
 
-getInOrderResult(root);
-show();
+}
+
+//根据button的ID分配处理函数
+ function distribute(){
+  if(this.id=="pre"){
+    reset();getPreOrderResult(root);show();
+  }
+  if(this.id=="inOrder"){
+    reset();getInOrderResult(root);show();
+  }
+  if(this.id=="post"){
+    reset();getPostOrderResult(root);show();
+  }
+ }
+
+delegateEvent(body,"button","click",distribute);
+
