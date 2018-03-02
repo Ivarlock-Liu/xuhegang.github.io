@@ -1,0 +1,99 @@
+#chart {
+width: 820px;
+height: 700px;
+background: #bbb;
+margin: 1px auto;
+position: relative;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+}
+
+text {
+	pointer-events: none;
+}
+
+.grandparent text { /* header text */
+	font-weight: bold;
+	font-size: medium;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif; 
+}
+
+rect {
+fill: none;
+stroke: #fff;
+}
+
+rect.parent,
+	.grandparent rect {
+		stroke-width: 2px;
+	}
+
+.grandparent rect {
+fill: #fff;
+}
+
+.children rect.parent,
+	.grandparent rect {
+cursor: pointer;
+	}
+
+rect.parent {
+	pointer-events: all; 
+}
+
+.children:hover rect.child,
+	.grandparent:hover rect {
+fill: #aaa;
+	}
+
+
+.textdiv { /* text in the boxes */
+	padding: 5px;
+	cursor: pointer;
+	opacity: 1;
+	color:white; 
+	font-weight: bold; 
+	text-shadow: black 1px 1px 5px;	
+}
+
+#tooltip {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+#descriptionArea{
+	text-align:left;
+	margin:10px 0 0 0;
+}
+
+#titleArea{
+	text-align:left;
+	margin:10px 0 0 0;
+}
+#intro{
+	margin-left:10px;
+}
+.levels{
+	text-indent:2em;
+}
